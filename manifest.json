@@ -1,17 +1,15 @@
 {
-    "name": "actualstorage.brycec",
-    "description": "description of actualstorage",
+    "name": "actualstorage.bryce",
+    "description": "app that calculates actual cpacity of secondary storage mediums (e.g. Hard drives & DVDs). It does not take filesystem into account.",
     "architecture": "all",
-    "title": "actualstorage",
+    "title": "Actual Storage",
     "hooks": {
         "Actual Storage": {
             "apparmor": "Actual Storage.apparmor",
-            "desktop":  "Actual Storage.desktop"
+            "desktop": "Actual Storage.desktop"
         }
     },
     "version": "0.1",
     "maintainer": "Bryce Campbell <ubuntu@brycecampbell.me>",
-    "framework" : "ubuntu-sdk-14.04"
+    "framework": "ubuntu-sdk-14.04-qml"
 }
-
-
