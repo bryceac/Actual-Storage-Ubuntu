@@ -42,21 +42,21 @@ jQuery(document).ready(function () {
        var size = jQuery('#size').val(), denomination = jQuery('#denominations option:selected').text();
 
         if (denomination === 'KB') {
-            jQuery('#result').val(getKB(size));
+            jQuery('#result').val(getKB(size).toFixed(2));
         } else if (denomination === 'MB') {
-            jQuery('#result').val(getMB(size));
+            jQuery('#result').val(getMB(size).toFixed(2));
         } else if (denomination === 'GB') {
-            jQuery('#result').val(getGB(size));
+            jQuery('#result').val(getGB(size).toFixed(2));
         } else if (denomination === 'TB') {
-            jQuery('#result').val(getTB(size));
+            jQuery('#result').val(getTB(size).toFixed(2));
         } else if (denomination === 'PB') {
-            jQuery('#result').val(getPB(size));
+            jQuery('#result').val(getPB(size).toFixed(2));
         } else if (denomination === 'EB') {
-            jQuery('#result').val(getEB(size));
+            jQuery('#result').val(getEB(size).toFixed(2));
         } else if (denomination === 'ZB') {
-            jQuery('#result').val(getZB(size));
+            jQuery('#result').val(getZB(size).toFixed(2));
         } else if (denomination === 'YB') {
-            jQuery('#result').val(getYB(size));
+            jQuery('#result').val(getYB(size).toFixed(2));
         }
     });
 });
