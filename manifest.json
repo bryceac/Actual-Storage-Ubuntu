@@ -1,0 +1,17 @@
+{
+    "name": "actualstorage.brycec",
+    "description": "description of actualstorage",
+    "architecture": "all",
+    "title": "actualstorage",
+    "hooks": {
+        "Actual Storage": {
+            "apparmor": "Actual Storage.apparmor",
+            "desktop":  "Actual Storage.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Bryce Campbell <ubuntu@brycecampbell.me>",
+    "framework" : "ubuntu-sdk-14.04"
+}
+
+
