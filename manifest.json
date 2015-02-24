@@ -2,7 +2,7 @@
     "name": "actualstorage.bryce",
     "description": "app that calculates actual cpacity of secondary storage mediums (e.g. Hard drives & DVDs). It does not take filesystem into account.",
     "architecture": "all",
-    "title": "ActualStorage",
+    "title": "Actual Storage",
     "hooks": {
         "Actual Storage": {
             "apparmor": "Actual Storage.apparmor",
