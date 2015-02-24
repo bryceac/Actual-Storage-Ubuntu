@@ -1,44 +1,62 @@
 /**
  * Wait before the DOM has been loaded before initializing the Ubuntu UI layer
  */
-window.onload = function () {
-    function addClass(elem, className) {
-        elem.className += ' ' + className;
-    };
+function getKB(a) {
+ return (a * 1000) / 1024;
+}
 
-    function removeClass(elem, className) {
-        elem.className = elem.className.replace(className, '');
-    };
+function getMB(a) {
+ return (a * Math.pow(1000, 2)) / Math.pow(1024, 2);
+}
 
+function getGB(a) {
+ return (a * Math.pow(1000, 3)) / Math.pow(1024, 3);
+}
 
+function getTB(a) {
+ return (a * Math.pow(1000, 4)) / Math.pow(1024, 4);
+}
+
+function getPB(a) {
+ return (a * Math.pow(1000, 5)) / Math.pow(1024, 5);
+}
+
+function getEB(a) {
+ return (a * Math.pow(1000, 6)) / Math.pow(1024, 6);
+}
+
+function getZB(a) {
+ return (a * Math.pow(1000, 7)) / Math.pow(1024, 7);
+}
+
+function getYB(a) {
+ return (a * Math.pow(1000, 8)) / Math.pow(1024, 8);
+}
+
+jQuery(document).ready(function () {
     var UI = new UbuntuUI();
     UI.init();
 
-    // Detect if Cordova script is uncommented or not and show the appropriate status.
-    var hasCordovaScript = false;
-    var scripts = [].slice.call(document.querySelectorAll('script'));
-    scripts.forEach(function (element) {
-        var attributes = element.attributes;
-        if (attributes && attributes.src && attributes.src.value.indexOf('cordova.js') !== -1) {
-            hasCordovaScript = true;
+    UI.button('calc').click(function (event) {
+       event.preventDefault();
+       var size = jQuery('#size').val(), denomination = jQuery('#denominations option:selected').text();
+
+        if (denomination === 'KB') {
+            jQuery('#result').val(getKB(size));
+        } else if (denomination === 'MB') {
+            jQuery('#result').val(getMB(size));
+        } else if (denomination === 'GB') {
+            jQuery('#result').val(getGB(size));
+        } else if (denomination === 'TB') {
+            jQuery('#result').val(getTB(size));
+        } else if (denomination === 'PB') {
+            jQuery('#result').val(getPB(size));
+        } else if (denomination === 'EB') {
+            jQuery('#result').val(getEB(size));
+        } else if (denomination === 'ZB') {
+            jQuery('#result').val(getZB(size));
+        } else if (denomination === 'YB') {
+            jQuery('#result').val(getYB(size));
         }
     });
-
-    var cordovaLoadingIndicator = document.querySelector('.load-cordova');
-    if (!hasCordovaScript) {
-        removeClass(document.querySelector('.ko-cordova'), 'is-hidden');
-        addClass(cordovaLoadingIndicator, 'is-hidden');
-    }
-
-    // Add an event listener that is pending on the initialization
-    //  of the platform layer API, if it is being used.
-    document.addEventListener("deviceready", function() {
-        if (console && console.log) {
-            console.log('Platform layer API ready');
-        }
-        removeClass(document.querySelector('.ok-cordova'), 'is-hidden');
-        addClass(cordovaLoadingIndicator, 'is-hidden');
-    }, false);
-};
-
-
+});
