@@ -1,0 +1,27 @@
+=Actual Storage=
+
+<span style="font-weight:bold">Version:</span> 0.1
+Copyright &#169; 2015 Bryce Campbell.
+
+<span style="font-weight:bold">Description:</span> This is the
+HTML 5 version of an [https://github.com/bryceac/ActualStorage Android app]
+that calculates the actual usable cacpacity of secondary storage mediums
+(e.g. Hard drives &#38; DVDs).
+
+== Version History ==
+
+<dl>
+<dt style="font-weight:bold">0.1</dt>
+<dd>first release</dd>
+</dl>
+
+== Support ==
+
+If you need help concerning this app,
+please send a message to the following address:
+
+ubuntu@brycecampbell.me
+
+== License ==
+
+Please read the file LICENSE.
